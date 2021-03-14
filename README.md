@@ -10,6 +10,22 @@ This script will backup with the postgres account each database defined in the a
 You will have to configure your paths at the beginin after installing [DropboxUploader](https://github.com/andreafabrizi/Dropbox-Uploader/) to the the communication with dropbox.
 The configure your databases and file paths.
 
+This may give a hint on how I configured my project:
+```bash
+git clone https://github.com/andreafabrizi/Dropbox-Uploader.git
+cd Dropbox-Uploader/
+chmod +x dropbox_uploader.sh
+./dropbox_uploader.sh
+mkdir -p /usr/local/backup/raspberry
+cd /usr/local/backup
+chmod 700 backup_raspi.sh
+usermod -a -G backup postgres
+chgrp -R backup /usr/local/backup/raspberry/
+chmod -R g+w /usr/local/backup/raspberry/
+chown postgres raspberry/
+```
+
+
 ## Usage
 
 Once you have the paths configured just execute it or create a cronjob. 
