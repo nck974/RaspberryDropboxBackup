@@ -1,3 +1,7 @@
+# Deprecated
+
+Now a days there are easier to use solutions using rclone or something similar. This will no longer be maintained.
+
 # RaspberryDropboxBackup
 
 This a quick script to backup your directories and postgres databases into dropbox.
